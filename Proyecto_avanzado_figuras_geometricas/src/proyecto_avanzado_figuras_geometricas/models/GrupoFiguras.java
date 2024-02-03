@@ -10,9 +10,9 @@ public class GrupoFiguras <T extends FiguraGeometrica & Escalable>{
 	
 	public GrupoFiguras(int capacidad) {
 		
-		arrayFiguras = (T[]) new FiguraGeometrica[capacidad];  
+		this.arrayFiguras = (T[]) new FiguraGeometrica[capacidad];  
 		
-		count = 0; 
+		this.count = 0; 
 		
 	}
 	
@@ -20,7 +20,7 @@ public class GrupoFiguras <T extends FiguraGeometrica & Escalable>{
 		
 		if(count < arrayFiguras.length) {
 			
-			arrayFiguras[count++] = figura;
+			this.arrayFiguras[count++] = figura;
 			
 		}
 		else {
@@ -33,7 +33,7 @@ public class GrupoFiguras <T extends FiguraGeometrica & Escalable>{
 	
 	public double calcularAreaTotal() {
 		
-		double areaTotal = 0; 
+		double areaTotal = 0.0; 
 		
 		for(FiguraGeometrica i : arrayFiguras) {
 			
